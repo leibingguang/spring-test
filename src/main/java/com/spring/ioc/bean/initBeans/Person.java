@@ -1,6 +1,8 @@
 package com.spring.ioc.bean.initBeans;
 
-public class Person {
+import org.springframework.beans.factory.DisposableBean;
+
+public class Person implements DisposableBean {
     private String id;
     private String name;
     /**
@@ -12,7 +14,28 @@ public class Person {
 
     private Car car;
 
+    private Car carBean;
+
     public Person() {
+    }
+
+    public Person(Car car) {
+        this.car = car;
+    }
+
+    public void testInitMethod()
+    {
+        this.sex = 1;
+    }
+
+    public void destroy() throws Exception {
+        System.out.println("destroyed");
+
+    }
+
+    public void testDestroyMethod() throws Exception
+    {
+        destroy();
     }
 
     public Person(String id, String name, int sex, String address, Car car) {
@@ -61,6 +84,14 @@ public class Person {
 
     public void setCar(Car car) {
         this.car = car;
+    }
+
+    public Car getCarBean() {
+        return carBean;
+    }
+
+    public void setCarBean(Car carBean) {
+        this.carBean = carBean;
     }
 
     @Override

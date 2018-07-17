@@ -17,6 +17,12 @@
     <!-- 空属性，调用默认构造器-->
     <bean id="car" class="com.spring.ioc.bean.initBeans.Car"/>
 
+    <!-- 设置name属性和alias属性-->
+    <bean id = "carId" name="carName" class="com.spring.ioc.bean.initBeans.Car"/>
+    <alias name="carId" alias="carIdAlias" />
+    <alias name="carName" alias="carNameAlias"/>
+
+
     <!-- setter注入属性 -->
     <bean id="personWithProperties" class="com.spring.ioc.bean.initBeans.Person">
         <property name="id" value="1"/>

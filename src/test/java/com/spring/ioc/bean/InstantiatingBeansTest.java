@@ -1,5 +1,6 @@
 package com.spring.ioc.bean;
 
+import com.spring.ioc.bean.initBeans.Car;
 import com.spring.ioc.bean.initBeans.Person;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -72,5 +73,21 @@ public class InstantiatingBeansTest
         Person person= (Person)beanFactory.getBean("personWithInstanceFactoryMethod");
         String value = person.getCar().getId();
         Assert.assertEquals(value, "instanceFactoryMethodId");
+    }
+
+    @Test
+    public void testAlias()
+    {
+        Car car = (Car)beanFactory.getBean("car");
+        Car carId = (Car)beanFactory.getBean("carId");
+        Car carName = (Car)beanFactory.getBean("carName");
+        Car carIdAlias = (Car)beanFactory.getBean("carIdAlias");
+        Car carNameAlias = (Car)beanFactory.getBean("carNameAlias");
+
+        Assert.assertNotNull(null, car);
+        Assert.assertNotNull(null, carId);
+        Assert.assertNotNull(null, carName);
+        Assert.assertNotNull(null, carIdAlias);
+        Assert.assertNotNull(null, carNameAlias);
     }
 }
