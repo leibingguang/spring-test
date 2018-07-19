@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="constructorArgBean" class="com.spring.ioc.bean.initBeans.ConstructorArgBean">
+        <constructor-arg index="0" name="list">
+            <list value-type="java.lang.String">
+                <value>constructor list string</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg ref="constructorRefBean"></constructor-arg>
+        <constructor-arg>
+            <array>
+                <value type="java.lang.String">arrayValue</value>
+            </array>
+        </constructor-arg>
+        <constructor-arg type="java.util.Set">
+            <set value-type="java.lang.String">
+                <value type="java.lang.String">setValue</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg>
+            <props value-type="java.lang.String" merge="false">
+                <prop key="propKey">propValue</prop>
+            </props>
+        </constructor-arg>
+        <constructor-arg name="string" value="stringValue"/>
+    </bean>
+
+    <bean id="constructorRefBean" class="java.util.HashMap">
+        <constructor-arg>
+            <map key-type="java.lang.String" value-type="java.lang.String">
+                <entry key="mapKey" value="mapValue"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="constructorArgBeanNull" class="com.spring.ioc.bean.initBeans.ConstructorArgBean">
+        <constructor-arg index="0" name="list">
+            <list value-type="java.lang.String">
+                <value>constructor list string</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <null></null>
+        </constructor-arg>
+        <constructor-arg>
+            <array>
+                <value type="java.lang.String">arrayValue</value>
+            </array>
+        </constructor-arg>
+        <constructor-arg type="java.util.Set">
+            <set value-type="java.lang.String">
+                <value type="java.lang.String">setValue</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg>
+            <props value-type="java.lang.String">
+                <prop key="propKey">propValue</prop>
+            </props>
+        </constructor-arg>
+        <constructor-arg name="string" value="stringValue"/>
+    </bean>
+
+</beans>

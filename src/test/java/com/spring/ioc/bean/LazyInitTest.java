@@ -1,5 +1,6 @@
 package com.spring.ioc.bean;
 
+import com.spring.ioc.bean.initBeans.Car;
 import com.spring.ioc.bean.initBeans.Person;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -50,7 +51,17 @@ public class LazyInitTest {
         Assert.assertNotNull(person.getCarBean());
     }
 
+    @Test
+    public void testName()
+    {
+        Car carA = (Car)beanFactory.getBean("a");
+        Car carB = (Car)beanFactory.getBean("b");
+        Car carC = (Car)beanFactory.getBean("c");
 
+        Assert.assertNotNull(carA);
+        Assert.assertNotNull(carB);
+        Assert.assertNotNull(carC);
+    }
 
 
     @Test

@@ -11,12 +11,19 @@
 在启动的过程中就会报错，所有的用例都不执行，如果使用了lazy-init，则执行到具体使用到personAutowiringByName对象的时候才报错-->
     <!--<bean id="carBean" class="com.spring.ioc.bean.initBeans.Car" lazy-init="true"></bean>-->
     <!--<bean id="car" class="com.spring.ioc.bean.initBeans.Car" lazy-init="true"></bean>-->
-    <bean id="car" class="com.spring.ioc.bean.initBeans.Car" lazy-init="false"/>
-    <bean id="carBean" class="com.spring.ioc.bean.initBeans.Car" lazy-init="false"/>
+    <!--<bean id="car" class="com.spring.ioc.bean.initBeans.Car" lazy-init="false"/>-->
+    <bean id="carBean" name="a,;b,;c" class="com.spring.ioc.bean.initBeans.Car" lazy-init="false"/>
 
     <!-- 自动装配 byType-->
     <bean id="personAutowiringByType" class="com.spring.ioc.bean.initBeans.Person" autowire="byType" lazy-init="false"/>
 
     <!-- 自动装配 byName-->
-    <bean id="personAutowiringByName" class="com.spring.ioc.bean.initBeans.Person" lazy-init="false" />
+    <bean id="personAutowiringByName" class="com.spring.ioc.bean.initBeans.Person" lazy-init="false" >
+        <description></description>
+        <constructor-arg>
+            <idref></idref>
+            <null />
+        </constructor-arg>
+    <meta key="" value=""/>
+    </bean>
 </beans>
