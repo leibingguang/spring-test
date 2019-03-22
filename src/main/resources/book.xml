@@ -3,7 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="testBean" class="com.lei.beanfactory.TestBean" scope="prototype">
-        <property name="testStr" value="Hello World!"/>
+    <!-- byName -->
+
+    <!--<bean id="person" class="com.lei.beanfactory.autowireType.Person" autowire="byName">-->
+    <bean id="person" class="com.lei.beanfactory.autowireType.Person" autowire="constructor">
     </bean>
+
+    <bean id="book" class="com.lei.beanfactory.autowireType.Book"></bean>
 </beans>
