@@ -1,5 +1,6 @@
-package com.spring.ioc.bean.initBeans;
+package com.spring.ioc.bean.contructor_arg;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -12,6 +13,10 @@ public class ConstructorArgBean {
     private Set<String> set;
     private Properties properties;
     private String string;
+
+    public ConstructorArgBean(String string) {
+        this.string = string;
+    }
 
     public List<String> getList() {
         return list;
@@ -68,5 +73,18 @@ public class ConstructorArgBean {
         this.set = set;
         this.properties = properties;
         this.string = string;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("ConstructorArgBean{");
+        sb.append("list=").append(list);
+        sb.append(", map=").append(map);
+        sb.append(", stringArray=").append(Arrays.toString(stringArray));
+        sb.append(", set=").append(set);
+        sb.append(", properties=").append(properties);
+        sb.append(", string='").append(string).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }

@@ -1,4 +1,4 @@
-package com.spring.ioc.bean;
+package com.spring.ioc.bean.scope;
 
 import com.spring.ioc.bean.initBeans.Car;
 import org.junit.Assert;
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
-public class ScopesTest {
+public class ScopesDemo {
     static BeanFactory beanFactory;
     @BeforeClass
     public static void beforeClass()

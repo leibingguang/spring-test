@@ -8,7 +8,10 @@ public class Car {
     public static Car getCar() {
         return new Car("staticFactoryMethodId", "Cayenne", "blue");
     }
+    public static Car getCar(String id, String brands, String color) {
+        return new Car(id, brands, color);
 
+    }
     public Car getCarWithInstance() {
         return new Car("instanceFactoryMethodId", "Cayenne", "blue");
 

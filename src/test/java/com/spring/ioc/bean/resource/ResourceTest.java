@@ -1,4 +1,4 @@
-package resource;
+package com.spring.ioc.bean.resource;
 
 import org.junit.Test;
 import org.springframework.core.io.*;
@@ -14,12 +14,12 @@ public class ResourceTest {
     @Test
     public void testClassPath() throws IOException {
         Resource resource = new ClassPathResource("test.txt");
-//        String fileName = resource.getFilename();
+//        String fileName = com.spring.ioc.bean.resource.getFilename();
 //        System.out.println(fileName);
         System.out.println(resource.getFile());
-//        System.out.println(resource.getURL());
-//    resource.getFile();   //获取资源对应的文件
-//    resource.getURL(); //获取资源对应的URL
+//        System.out.println(com.spring.ioc.bean.resource.getURL());
+//    com.spring.ioc.bean.resource.getFile();   //获取资源对应的文件
+//    com.spring.ioc.bean.resource.getURL(); //获取资源对应的URL
         if (resource.isReadable()) {
             //每次都会打开一个新的流
             InputStream is = resource.getInputStream();

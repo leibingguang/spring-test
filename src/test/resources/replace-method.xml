@@ -3,7 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="testBean" class="com.spring.ioc.bean.initBeans.Person">
-        <property name="testStr" value="Hello World!"/>
+
+    <bean id="changeMe" class="com.spring.ioc.bean.replace_method.ChangeMe">
+        <replaced-method name="changeMe" replacer="replacer"/>
     </bean>
+    <bean id="replacer" class="com.spring.ioc.bean.replace_method.TestMethodReplacer"/>
 </beans>

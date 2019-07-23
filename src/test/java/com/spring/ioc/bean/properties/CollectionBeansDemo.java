@@ -1,6 +1,6 @@
-package com.spring.ioc.bean;
+package com.spring.ioc.bean.properties;
 
-import com.spring.ioc.bean.collection.ComplexObject;
+import com.spring.ioc.bean.initBeans.ComplexObject;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -9,7 +9,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
-public class CollectionBeansTest {
+public class CollectionBeansDemo {
     private static BeanFactory beanFactory;
     private static ComplexObject complexObject;
     @BeforeClass

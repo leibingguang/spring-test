@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="constructorArgBean" class="com.spring.ioc.bean.initBeans.ConstructorArgBean">
+    <bean id="constructorArgBean" class="com.spring.ioc.bean.contructor_arg.ConstructorArgBean">
         <constructor-arg index="0" name="list">
             <list value-type="java.lang.String">
                 <value>constructor list string</value>
@@ -37,7 +37,7 @@
     </bean>
 
 
-    <bean id="constructorArgBeanNull" class="com.spring.ioc.bean.initBeans.ConstructorArgBean">
+    <bean id="constructorArgBeanNull" class="com.spring.ioc.bean.contructor_arg.ConstructorArgBean">
         <constructor-arg index="0" name="list">
             <list value-type="java.lang.String">
                 <value>constructor list string</value>
@@ -64,4 +64,7 @@
         <constructor-arg name="string" value="stringValue"/>
     </bean>
 
+    <bean id="explicitArgs" class="com.spring.ioc.bean.contructor_arg.ConstructorArgBean">
+        <constructor-arg index="0" value="1"/>
+    </bean>
 </beans>

@@ -1,4 +1,4 @@
-package com.spring.ioc.bean.collection;
+package com.spring.ioc.bean.initBeans;
 
 import java.util.List;
 import java.util.Map;

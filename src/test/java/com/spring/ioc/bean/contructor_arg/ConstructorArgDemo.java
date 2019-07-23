@@ -1,6 +1,6 @@
-package com.spring.ioc.bean;
+package com.spring.ioc.bean.contructor_arg;
 
-import com.spring.ioc.bean.initBeans.ConstructorArgBean;
+import com.spring.ioc.bean.contructor_arg.ConstructorArgBean;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
-public class ConstructorArgTest {
+public class ConstructorArgDemo {
     static BeanFactory beanFactory;
     @BeforeClass
     public static void beforeClass()
@@ -26,6 +26,7 @@ public class ConstructorArgTest {
         Assert.assertNotNull(constructorArgBean.getSet());
         Assert.assertNotNull(constructorArgBean.getStringArray());
         Assert.assertNotNull(constructorArgBean.getString());
+
     }
 
     @Test

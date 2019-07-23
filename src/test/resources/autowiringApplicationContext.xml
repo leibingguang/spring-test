@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lang="http://www.springframework.org/schema/lang"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd">
     <!--不进行自动装配 通过ref元素定义-->
     <bean id="personAutowiringNo" class="com.spring.ioc.bean.initBeans.Person">
         <property name="car" ref="carBean"/>
@@ -17,5 +17,10 @@
     <bean id="personAutowiringByName" class="com.spring.ioc.bean.initBeans.Person" autowire="byName"/>
 
     <!-- 自动装配 constructor -->
-    <bean id="personAutowiringConstructor" class="com.spring.ioc.bean.initBeans.Person" autowire="constructor"/>
+    <bean id="personAutowiringConstructor"
+          class="com.spring.ioc.bean.initBeans.Person" autowire="constructor"
+    scope="prototype">
+    </bean>
+    <bean id="subBean" parent="personAutowiringConstructor" class="com.spring.ioc.bean.initBeans.Person">
+    </bean>
 </beans>
