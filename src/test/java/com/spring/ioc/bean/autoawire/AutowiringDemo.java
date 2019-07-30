@@ -23,7 +23,8 @@ public class AutowiringDemo {
     public void testAutowiringNo()
     {
         Person person = (Person)beanFactory.getBean("personAutowiringNo");
-        Assert.assertNotNull(person.getCar());
+        System.out.println(person);
+        Assert.assertNotNull(person.getCarBean());
     }
 
     /**
@@ -33,7 +34,8 @@ public class AutowiringDemo {
     public void testAutowiringByNameCar()
     {
         Person person = (Person)beanFactory.getBean("personAutowiringByName");
-        Assert.assertNull(person.getCar());
+        System.out.println(person);
+        Assert.assertNull(person.getCarBean());
     }
 
     /**
@@ -44,6 +46,7 @@ public class AutowiringDemo {
     {
         Person person = (Person)beanFactory.getBean("personAutowiringByName");
         Assert.assertNotNull(person.getCarBean());
+        System.out.println(person);
     }
 
     /**
@@ -53,7 +56,8 @@ public class AutowiringDemo {
     public void testAutowiringByType()
     {
         Person person = (Person)beanFactory.getBean("personAutowiringByType");
-        Assert.assertNotNull(person.getCar());
+        Assert.assertNotNull(person.getCarBean());
+        System.out.println(person);
     }
 
 
@@ -65,6 +69,6 @@ public class AutowiringDemo {
     public void testAutowiringConstructor()
     {
         Person person = (Person)beanFactory.getBean("personAutowiringConstructor");
-        Assert.assertNotNull(person.getCar());
+        Assert.assertNotNull(person.getCarBean());
     }
 }

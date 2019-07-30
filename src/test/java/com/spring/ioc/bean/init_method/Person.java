@@ -1,5 +1,6 @@
-package com.spring.ioc.bean.initBeans;
+package com.spring.ioc.bean.init_method;
 
+import com.spring.ioc.bean.initBeans.Car;
 import org.springframework.beans.factory.DisposableBean;
 
 public class Person implements DisposableBean {
@@ -14,8 +15,10 @@ public class Person implements DisposableBean {
 
     private Car car;
 
-    private Car carBean;
-
+    public void init()
+    {
+        this.setAddress("我家住在松花江上");
+    }
     public Person() {
     }
 
@@ -23,8 +26,7 @@ public class Person implements DisposableBean {
         this.car = car;
     }
 
-    public void testInitMethod()
-    {
+    public void testInitMethod() {
         this.sex = 1;
     }
 
@@ -33,8 +35,7 @@ public class Person implements DisposableBean {
 
     }
 
-    public void testDestroyMethod() throws Exception
-    {
+    public void testDestroyMethod() throws Exception {
         destroy();
     }
 
@@ -86,14 +87,6 @@ public class Person implements DisposableBean {
         this.car = car;
     }
 
-    public Car getCarBean() {
-        return carBean;
-    }
-
-    public void setCarBean(Car carBean) {
-        this.carBean = carBean;
-    }
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Person{");
@@ -102,7 +95,6 @@ public class Person implements DisposableBean {
         sb.append(", sex=").append(sex);
         sb.append(", address='").append(address).append('\'');
         sb.append(", car=").append(car);
-        sb.append(", carBean=").append(carBean);
         sb.append('}');
         return sb.toString();
     }
