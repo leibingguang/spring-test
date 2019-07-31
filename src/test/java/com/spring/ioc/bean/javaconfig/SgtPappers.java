@@ -1,4 +1,4 @@
-package com.lei.beanfactory.test.wire.javaconfig;
+package com.spring.ioc.bean.javaconfig;
 
 import org.springframework.stereotype.Component;
 

@@ -1,10 +1,12 @@
 package com.spring.ioc.bean.lifecycle.bean;
 
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
-public class LifeCycleBean implements InitializingBean {
+public class LifeCycleBean implements InitializingBean, DisposableBean {
     private String id;
     private String beanName;
     private String value;
@@ -22,6 +24,20 @@ public class LifeCycleBean implements InitializingBean {
         System.out.println("afterPropertiesSet execute!");
     }
 
+    public void close()
+    {
+        System.out.println("destroy-method execute!");
+    }
+
+    public void destroy() throws Exception {
+        System.out.println("destroy execute!");
+    }
+
+    @PreDestroy
+    public void preDestroy()
+    {
+        System.out.println("preDestroy execute!");
+    }
     public String getId() {
         return id;
     }

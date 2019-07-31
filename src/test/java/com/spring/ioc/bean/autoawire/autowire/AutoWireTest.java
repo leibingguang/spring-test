@@ -1,4 +1,4 @@
-package com.lei.beanfactory.test.wire.autowire;
+package com.spring.ioc.bean.autoawire.autowire;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

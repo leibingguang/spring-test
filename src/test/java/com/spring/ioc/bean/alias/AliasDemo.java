@@ -23,12 +23,14 @@ public class AliasDemo
     @Test
     public void testAlias()
     {
-        Car car = (Car)beanFactory.getBean("car");
+        Car car = (Car)beanFactory.getBean("com.spring.ioc.bean.initBeans.Car");
+        Car car2 = (Car)beanFactory.getBean("car2");
         Car carId = (Car)beanFactory.getBean("carId");
         Car carName = (Car)beanFactory.getBean("carName");
         Car carIdAlias = (Car)beanFactory.getBean("carIdAlias");
         Car carNameAlias = (Car)beanFactory.getBean("carNameAlias");
-
+        System.out.println(car);
+//        System.out.println(carName);
         Assert.assertNotNull(null, car);
         Assert.assertNotNull(null, carId);
         Assert.assertNotNull(null, carName);

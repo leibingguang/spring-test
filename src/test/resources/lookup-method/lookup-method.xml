@@ -9,6 +9,9 @@
     <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 
     <!--<context:annotation-config />-->
-    <bean id="lifecycleBean" class="com.spring.ioc.bean.lifecycle.bean.LifeCycleBean" init-method="init" destroy-method="close"/>
+    <bean id="lookupMethodBean" class="com.spring.ioc.bean.lookup_method.bean.LookupMethodBean">
+        <lookup-method bean="teacher" name="getBean"/>
+    </bean>
+    <bean id="teacher" class="com.spring.ioc.bean.lookup_method.bean.Teacher"/>
     <!--<context:component-scan base-package="com.spring.ioc"/>-->
 </beans>

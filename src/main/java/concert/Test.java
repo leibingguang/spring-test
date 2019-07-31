@@ -1,7 +1,5 @@
 package concert;
 
-import com.lei.beanfactory.test.wire.autowire.CDPlayer;
-import com.lei.beanfactory.test.wire.autowire.CompactDisc;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;

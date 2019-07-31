@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lang="http://www.springframework.org/schema/lang"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/lang
+        http://www.springframework.org/schema/lang/spring-lang.xsd" default-autowire-candidates="*1">
+    <!--不进行自动装配 通过ref元素定义-->
+    <bean id="mapBean" class="com.spring.ioc.bean.autoawire.MapBean" autowire="byType"></bean>
+    <bean id="car1" class="com.spring.ioc.bean.initBeans.Car">
+        <property name="id" value="1"/>
+        <property name="brands" value="1"/>
+        <property name="color" value="1"/>
+    </bean>
+    <bean id="car2" class="com.spring.ioc.bean.initBeans.Car" autowire-candidate="false">
+        <property name="id" value="2"/>
+        <property name="brands" value="2"/>
+        <property name="color" value="2"/>
+    </bean>
+
+</beans>

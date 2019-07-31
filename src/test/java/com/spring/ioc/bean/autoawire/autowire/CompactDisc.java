@@ -1,4 +1,4 @@
-package com.lei.beanfactory.test.wire.javaconfig;
+package com.spring.ioc.bean.autoawire.autowire;
 
 public interface CompactDisc {
     void play();

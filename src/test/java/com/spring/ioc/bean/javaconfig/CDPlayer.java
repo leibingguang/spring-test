@@ -1,7 +1,6 @@
-package com.lei.beanfactory.test.wire.javaconfig;
+package com.spring.ioc.bean.javaconfig;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
