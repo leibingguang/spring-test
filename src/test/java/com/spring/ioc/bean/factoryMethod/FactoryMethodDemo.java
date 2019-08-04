@@ -16,10 +16,23 @@ public class FactoryMethodDemo {
         beanFactory = new XmlBeanFactory(new ClassPathResource("factoryMethod.xml"));
     }
 
+    /**
+     * 通过getBean携带方法参数来设置factory-method的参数
+     */
     @Test
     public void testFactoryMethod()
     {
         Car car = (Car)beanFactory.getBean("car", "1121212", "1", "2");
+        System.out.println(car);
+    }
+
+    /**
+     * 通过<constructor-arg></constructor-arg>标签来设置factory-method的参数
+     */
+    @Test
+    public void testArgsToUsedConstructor()
+    {
+        Car car = (Car)beanFactory.getBean("argsToUseConstructor");
         System.out.println(car);
     }
 }

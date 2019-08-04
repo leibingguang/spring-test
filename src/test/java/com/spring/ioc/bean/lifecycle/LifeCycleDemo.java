@@ -10,7 +10,7 @@ public class LifeCycleDemo {
     @BeforeClass
     public static void beforeClass()
     {
-//        applicationContext = new XmlBeanFactory(new ClassPathResource("lifecycle/lifecycle.xml"));
+//        applicationContext = new XmlBeanFactory(new ClassPathResource("lifecycle/dependsOn.xml"));
         applicationContext = new ClassPathXmlApplicationContext("lifecycle/lifecycle.xml");
     }
 

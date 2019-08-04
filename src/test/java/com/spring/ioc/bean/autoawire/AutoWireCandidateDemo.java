@@ -21,6 +21,7 @@ public class AutoWireCandidateDemo {
     @Test
     public void testMapAutoWire() {
         MapBean mapBean = (MapBean) beanFactory.getBean("mapBean");
+        beanFactory.getBean("car1");
         System.out.println(mapBean);
     }
 }

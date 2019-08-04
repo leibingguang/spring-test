@@ -17,7 +17,7 @@ public class Person implements DisposableBean {
 
     public void init()
     {
-        this.setAddress("我家住在松花江上");
+        this.setAddress("福建");
     }
     public Person() {
     }

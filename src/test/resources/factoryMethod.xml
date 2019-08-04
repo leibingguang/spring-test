@@ -10,4 +10,10 @@
         <!--<property name="color" value="color"/>-->
     </bean>
 
+    <bean id="argsToUseConstructor" class="com.spring.ioc.bean.initBeans.Car" factory-method="getCar">
+        <constructor-arg name="id" value="argsToUseConstructor-id"/>
+        <constructor-arg name="color" value="argsToUseConstructor-color"/>
+        <constructor-arg name="brands" value="argsToUseConstructor-brands"/>
+    </bean>
+
 </beans>

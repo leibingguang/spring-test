@@ -4,6 +4,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.cglib.core.DebuggingClassWriter;
 import org.springframework.core.io.ClassPathResource;
 
 public class Main {
@@ -16,6 +17,8 @@ public class Main {
     @Test
     public void testReplaceMethod()
     {
+        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY,
+                "I:\\code\\spring\\spring-test\\src\\test\\java\\com\\spring\\ioc\\bean\\replace_method\\generateclass");
         ChangeMe changeMe = (ChangeMe)beanFactory.getBean("changeMe");
         System.out.println(changeMe.changeMe());
     }
