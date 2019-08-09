@@ -49,7 +49,7 @@
     <!--<constructor-arg index="4" ref="car"/>-->
     <!--</bean>-->
     <!-- 按名称注入 -->
-    <bean id="personWithArgs" class="com.spring.ioc.bean.initBeans.Person">
+    <bean id="personWithArgs" class="com.spring.ioc.initBeans.Person">
         <constructor-arg name="id" value="1"/>
         <constructor-arg name="name" value="lei"/>
         <constructor-arg name="sex" value="1"/>
@@ -57,12 +57,12 @@
         <constructor-arg name="car" ref="car"/>
     </bean>
     <!-- C标签 注入-->
-    <bean id="personWithCTags" class="com.spring.ioc.bean.initBeans.Person" c:_0="1" c:_1="lei" c:_2="1" c:_3="Hangzhou"
+    <bean id="personWithCTags" class="com.spring.ioc.initBeans.Person" c:_0="1" c:_1="lei" c:_2="1" c:_3="Hangzhou"
           c:_4-ref="car"></bean>
 
     <!-- 静态工厂方法注入-->
-    <bean id="carStaticFactoryMethod" class="com.spring.ioc.bean.initBeans.Car" factory-method="getCar"/>
-    <bean id="personWithStaticFactoryMethod" class="com.spring.ioc.bean.initBeans.Person">
+    <bean id="carStaticFactoryMethod" class="com.spring.ioc.initBeans.Car" factory-method="getCar"/>
+    <bean id="personWithStaticFactoryMethod" class="com.spring.ioc.initBeans.Person">
         <constructor-arg name="id" value="1"/>
         <constructor-arg name="name" value="lei"/>
         <constructor-arg name="sex" value="1"/>
@@ -72,7 +72,7 @@
 
     <!-- 实例工厂方法注入-->
     <bean id="carInstanceFactoryMethod" factory-bean="car" factory-method="getCarWithInstance"/>
-    <bean id="personWithInstanceFactoryMethod" class="com.spring.ioc.bean.initBeans.Person">
+    <bean id="personWithInstanceFactoryMethod" class="com.spring.ioc.initBeans.Person">
         <constructor-arg name="id" value="1"/>
         <constructor-arg name="name" value="lei"/>
         <constructor-arg name="sex" value="1"/>

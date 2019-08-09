@@ -4,30 +4,30 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd">
     <!--不进行自动装配 通过ref元素定义-->
-    <bean id="personAutowiringNo" class="com.spring.ioc.bean.initBeans.Person">
+    <bean id="personAutowiringNo" class="com.spring.ioc.initBeans.Person">
         <property name="car" ref="carBean"/>
     </bean>
-    <bean id="carBean" class="com.spring.ioc.bean.initBeans.Car">
+    <bean id="carBean" class="com.spring.ioc.initBeans.Car">
         <property name="id" value="id"/>
         <property name="brands" value="brands"/>
         <property name="color" value="color"/>
     </bean>
-    <!--<bean id="carBean" class="com.spring.ioc.bean.initBeans.Car"></bean>-->
+    <!--<bean id="carBean" class="com.spring.ioc.initBeans.Car"></bean>-->
 
     <!-- 自动装配 byType-->
-    <bean id="personAutowiringByType" class="com.spring.ioc.bean.initBeans.Person" autowire="byType"/>
+    <bean id="personAutowiringByType" class="com.spring.ioc.initBeans.Person" autowire="byType"/>
 
     <!-- 自动装配 byName-->
-    <bean id="personAutowiringByName" class="com.spring.ioc.bean.initBeans.Person" autowire="byName">
+    <bean id="personAutowiringByName" class="com.spring.ioc.initBeans.Person" autowire="byName">
         <!--<property name="carBean" ref="carBean"/>-->
 
     </bean>
 
     <!-- 自动装配 constructor -->
     <bean id="personAutowiringConstructor"
-          class="com.spring.ioc.bean.initBeans.Person" autowire="constructor"
+          class="com.spring.ioc.initBeans.Person" autowire="constructor"
     scope="prototype">
     </bean>
-    <bean id="subBean" parent="personAutowiringConstructor" class="com.spring.ioc.bean.initBeans.Person">
+    <bean id="subBean" parent="personAutowiringConstructor" class="com.spring.ioc.initBeans.Person">
     </bean>
 </beans>

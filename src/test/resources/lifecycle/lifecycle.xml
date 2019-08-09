@@ -9,6 +9,6 @@
     <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
 
     <!--<context:annotation-config />-->
-    <bean id="lifecycleBean" class="com.spring.ioc.bean.lifecycle.bean.LifeCycleBean" init-method="init" destroy-method="close"/>
+    <bean id="lifecycleBean" class="com.spring.ioc.lifecycle.bean.LifeCycleBean" init-method="init" destroy-method="close"/>
     <!--<context:component-scan base-package="com.spring.ioc"/>-->
 </beans>

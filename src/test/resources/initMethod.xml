@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd">
 
-    <bean id="person" class="com.spring.ioc.bean.init_method.Person" init-method="init">
+    <bean id="person" class="com.spring.ioc.init_method.Person" init-method="init">
     </bean>
 
 </beans>

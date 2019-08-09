@@ -4,13 +4,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd">
 
-    <bean id="car" class="com.spring.ioc.bean.initBeans.Car" factory-method="getCar">
+    <bean id="car" class="com.spring.ioc.initBeans.Car" factory-method="getCar">
         <property name="id" value="id"/>
         <property name="brands" value="brands"/>
         <!--<property name="color" value="color"/>-->
     </bean>
 
-    <bean id="argsToUseConstructor" class="com.spring.ioc.bean.initBeans.Car" factory-method="getCar">
+    <bean id="argsToUseConstructor" class="com.spring.ioc.initBeans.Car" factory-method="getCar">
         <constructor-arg name="id" value="argsToUseConstructor-id"/>
         <constructor-arg name="color" value="argsToUseConstructor-color"/>
         <constructor-arg name="brands" value="argsToUseConstructor-brands"/>

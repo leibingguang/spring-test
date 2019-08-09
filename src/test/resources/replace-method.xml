@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="changeMe" class="com.spring.ioc.bean.replace_method.ChangeMe">
+    <bean id="changeMe" class="com.spring.ioc.replace_method.ChangeMe">
         <replaced-method name="changeMe" replacer="replacer"/>
     </bean>
-    <bean id="replacer" class="com.spring.ioc.bean.replace_method.TestMethodReplacer"/>
+    <bean id="replacer" class="com.spring.ioc.replace_method.TestMethodReplacer"/>
 </beans>

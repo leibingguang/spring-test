@@ -12,7 +12,7 @@
         <property name="password" value="masterkaoli"/>
     </bean>
 
-    <bean id="moreComplexObject" class="com.spring.ioc.bean.initBeans.ComplexObject">
+    <bean id="moreComplexObject" class="com.spring.ioc.initBeans.ComplexObject">
         <!-- results in a setAdminEmails(java.util.Properties) call -->
         <property name="adminEmails">
             <props>

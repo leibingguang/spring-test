@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 测试 初始化和destroy回调方法-->
-    <bean id="personInitCallback" class="com.spring.ioc.bean.initBeans.Person"
+    <bean id="personInitCallback" class="com.spring.ioc.initBeans.Person"
           init-method="testInitMethod" destroy-method="testDestroyMethod"/>
 
 </beans>
