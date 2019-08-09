@@ -1,9 +1,0 @@
-package com.spring.ioc.bean.autoawire.autowire;
-
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-
-@Configuration
-@ComponentScan(basePackageClasses = CompactDisc.class)
-public class CDPlayConfig {
-}
