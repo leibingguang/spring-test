@@ -1,11 +1,10 @@
 package com.spring.ioc.lookup_method;
 
-import com.spring.ioc.bean.lookup_method.bean.LookupMethodBean;
+import com.spring.ioc.lookup_method.bean.LookupMethodBean;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.cglib.core.DebuggingClassWriter;
 import org.springframework.core.io.ClassPathResource;
 
 public class LookupMethodAnnotationDemo {

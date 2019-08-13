@@ -1,9 +1,6 @@
 package com.spring.ioc.factoryBean;
 
-import com.spring.ioc.bean.initBeans.Car;
-import com.spring.ioc.bean.initBeans.Person;
 import com.spring.ioc.initBeans.Car;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;

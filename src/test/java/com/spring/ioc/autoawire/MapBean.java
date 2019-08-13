@@ -1,6 +1,5 @@
 package com.spring.ioc.autoawire;
 
-import com.spring.ioc.bean.initBeans.Car;
 import com.spring.ioc.initBeans.Car;
 
 import java.util.Map;

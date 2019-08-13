@@ -1,6 +1,6 @@
 package com.spring.ioc.factoryBean;
 
-import com.spring.ioc.bean.initBeans.Car;
+import com.spring.ioc.initBeans.Car;
 import org.springframework.beans.factory.FactoryBean;
 
 public class CarFactoryBeanObject implements FactoryBean{

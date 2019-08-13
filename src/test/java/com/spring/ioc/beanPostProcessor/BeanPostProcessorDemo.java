@@ -1,6 +1,6 @@
 package com.spring.ioc.beanPostProcessor;
 
-import com.spring.ioc.bean.beanPostProcessor.postprocessor.MyBeanPostProcessor;
+import com.spring.ioc.beanPostProcessor.postprocessor.MyBeanPostProcessor;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;

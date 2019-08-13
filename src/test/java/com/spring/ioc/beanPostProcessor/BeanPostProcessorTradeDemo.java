@@ -1,6 +1,5 @@
 package com.spring.ioc.beanPostProcessor;
 
-import com.spring.ioc.bean.beanPostProcessor.bean.Person;
 import com.spring.ioc.beanPostProcessor.bean.Person;
 import org.junit.BeforeClass;
 import org.junit.Test;

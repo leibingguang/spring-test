@@ -1,6 +1,6 @@
 package com.spring.ioc.properties;
 
-import com.spring.ioc.bean.initBeans.ComplexObject;
+import com.spring.ioc.initBeans.ComplexObject;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.junit.Assert;
 import org.junit.BeforeClass;

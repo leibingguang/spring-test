@@ -1,6 +1,5 @@
 package com.spring.ioc.factoryMethod;
 
-import com.spring.ioc.bean.initBeans.Car;
 import com.spring.ioc.initBeans.Car;
 import org.junit.BeforeClass;
 import org.junit.Test;

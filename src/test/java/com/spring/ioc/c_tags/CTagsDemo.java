@@ -1,7 +1,6 @@
 package com.spring.ioc.c_tags;
 
-import com.spring.ioc.bean.initBeans.Car;
-import com.spring.ioc.bean.initBeans.Person;
+import com.spring.ioc.initBeans.Person;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

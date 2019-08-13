@@ -1,6 +1,5 @@
 package com.spring.ioc.contructor_arg;
 
-import com.spring.ioc.bean.contructor_arg.ConstructorArgBean;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

@@ -1,6 +1,5 @@
 package com.spring.ioc.scope;
 
-import com.spring.ioc.bean.initBeans.Car;
 import com.spring.ioc.initBeans.Car;
 import org.junit.Assert;
 import org.junit.BeforeClass;
