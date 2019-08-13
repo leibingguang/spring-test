@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="dinner" class="com.spring.aop.pojo.Lunch"/>
+    <bean id="assistanceAction" class="com.spring.aop.pojo.AssistanceAction"/>
+
+    <aop:config>
+        <aop:aspect ref="assistanceAction">
+            <aop:pointcut id="dinnerPointcut" expression="execution(* com.spring.aop.pojo.Dinner.eating(..))"/>
+            <aop:before method="washHands" pointcut-ref="dinnerPointcut"/>
+            <aop:after method="brushTooth" pointcut-ref="dinnerPointcut"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

@@ -2,17 +2,26 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/beans/spring-aop.xsd">
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--连接点 -->
     <bean id="human" class="com.spring.aop.classics.Human"/>
+
+    <!--通知-->
     <bean id="sleepHelper" class="com.spring.aop.classics.SleepHelper"/>
+    <!--切点-->
     <bean id="sleepPointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut">
         <property name="pattern" value=".*sleep"/>
     </bean>
+    <!--切面 -->
     <bean id="sleepHelperAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
         <property name="advice" ref="sleepHelper"/>
         <property name="pointcut" ref="sleepPointcut"/>
+    </bean>
+    <!-- 织入，生成代理 -->
+    <bean id="humanProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="target" ref="human"/>
+        <property name="interceptorNames" value="sleepHelperAdvisor"/>
+        <property name="proxyInterfaces" value="com.spring.aop.classics.Sleepable"/>
     </bean>
 </beans>
