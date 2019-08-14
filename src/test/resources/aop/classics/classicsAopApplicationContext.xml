@@ -20,8 +20,11 @@
     </bean>
     <!-- 织入，生成代理 -->
     <bean id="humanProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <!--目标对象-->
         <property name="target" ref="human"/>
+        <!-- 切面-->
         <property name="interceptorNames" value="sleepHelperAdvisor"/>
+        <!--接口实现，区分java动态代理和cglib代理-->
         <property name="proxyInterfaces" value="com.spring.aop.classics.Sleepable"/>
     </bean>
 </beans>

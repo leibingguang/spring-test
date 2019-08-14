@@ -4,14 +4,26 @@
 
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!-- 目标对象-->
     <bean id="dinner" class="com.spring.aop.pojo.Lunch"/>
+
     <bean id="assistanceAction" class="com.spring.aop.pojo.AssistanceAction"/>
 
+    <!-- 强制使用CGLib动态代理-->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
     <aop:config>
+        <!--切面：通知+切点：-->
         <aop:aspect ref="assistanceAction">
+            <!--何处插入切面-->
+            <!--切点-->
             <aop:pointcut id="dinnerPointcut" expression="execution(* com.spring.aop.pojo.Dinner.eating(..))"/>
+            <!-- 切面是什么以及何时使用-->
+            <!--前置通知-->
             <aop:before method="washHands" pointcut-ref="dinnerPointcut"/>
+            <!-- 后置通知-->
             <aop:after method="brushTooth" pointcut-ref="dinnerPointcut"/>
+
         </aop:aspect>
     </aop:config>
 </beans>
