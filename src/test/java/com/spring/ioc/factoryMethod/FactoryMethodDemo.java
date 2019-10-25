@@ -13,7 +13,7 @@ public class FactoryMethodDemo {
     @BeforeClass
     public static void beforeClass()
     {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("factoryMethod.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/factory-method/factoryMethod.xml"));
     }
 
     /**
@@ -27,7 +27,7 @@ public class FactoryMethodDemo {
     }
 
     /**
-     * 通过<constructor-arg></constructor-arg>标签来设置factory-method的参数
+     * 通过<bean.constructor-arg></bean.constructor-arg>标签来设置factory-method的参数
      */
     @Test
     public void testArgsToUsedConstructor()

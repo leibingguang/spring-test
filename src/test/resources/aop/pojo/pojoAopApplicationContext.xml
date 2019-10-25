@@ -8,13 +8,18 @@
     <bean id="dinner" class="com.spring.aop.pojo.Lunch"/>
 
     <bean id="assistanceAction" class="com.spring.aop.pojo.AssistanceAction"/>
-
+    <!-- 与<aop:config/>下的<aop:advisor/>配合使用,侵入式设计，需要实现通知api-->
+    <!--<bean id="assistanceActionAdvice" class="com.spring.aop.pojo.AssistanceActionAdvice"/>-->
     <!-- 强制使用CGLib动态代理-->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
     <aop:config>
+        <!--pointcut的定义必须在<aop:aspect/>之前-->
+        <!--<aop:pointcut id="dinnerPointcut" expression="execution(* com.spring.aop.pojo.Dinner.eating(..))"/>-->
         <!--切面：通知+切点：-->
         <aop:aspect ref="assistanceAction">
+            <!--实现接口的扩展-->
+            <!--<aop:declare-parents types-matching="String" implement-interface="" default-impl="" delegate-ref=""/>-->
             <!--何处插入切面-->
             <!--切点-->
             <aop:pointcut id="dinnerPointcut" expression="execution(* com.spring.aop.pojo.Dinner.eating(..))"/>
@@ -25,5 +30,8 @@
             <aop:after method="brushTooth" pointcut-ref="dinnerPointcut"/>
 
         </aop:aspect>
+
+        <!--和<aop:aspect/>一样，表示只有一个通知和一个切入点的切面-->
+        <!--<aop:advisor advice-ref="assistanceActionAdvice" id="assistanceAction" order="1" pointcut="execution(* com.spring.aop.pojo.Dinner.eating(..))" /> &lt;!&ndash;pointcut-ref="dinnerPointcut" &ndash;&gt;-->
     </aop:config>
 </beans>

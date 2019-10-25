@@ -2,7 +2,6 @@ package com.spring.ioc.lifecycle;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class LifeCycleDemo {
@@ -10,8 +9,8 @@ public class LifeCycleDemo {
     @BeforeClass
     public static void beforeClass()
     {
-//        applicationContext = new XmlBeanFactory(new ClassPathResource("lifecycle/dependsOn.xml"));
-        applicationContext = new ClassPathXmlApplicationContext("lifecycle/lifecycle.xml");
+//        applicationContext = new XmlBeanFactory(new ClassPathResource("bean.lifecycle/dependsOn.xml"));
+        applicationContext = new ClassPathXmlApplicationContext("bean/lifecycle/lifecycle.xml");
     }
 
     @Test

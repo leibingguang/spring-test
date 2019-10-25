@@ -16,7 +16,7 @@ public class AliasDemo
     @BeforeClass
     public static void beforeClass()
     {
-       beanFactory = new XmlBeanFactory(new ClassPathResource("initBeansApplicationContext.xml"));
+       beanFactory = new XmlBeanFactory(new ClassPathResource("bean/init-bean/initBeansApplicationContext.xml"));
     }
     
     @Test

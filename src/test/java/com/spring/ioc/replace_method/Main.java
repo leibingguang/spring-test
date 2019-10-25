@@ -12,7 +12,7 @@ public class Main {
     @BeforeClass
     public static void beforeClass()
     {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("replace-method.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/replace-method/replace-method.xml"));
     }
     @Test
     public void testReplaceMethod()

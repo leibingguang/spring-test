@@ -11,7 +11,7 @@ public class InitMethodDemo {
 
     @BeforeClass
     public static void beforeClass() {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("initMethod.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/init-method/initMethod.xml"));
     }
 
     @Test

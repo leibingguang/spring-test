@@ -34,19 +34,19 @@
 
     <!-- 有参构造器注入-->
     <!--<bean id="personWithArgs" class="com.spring.ioc.bean.initBeans.Person">-->
-    <!--<constructor-arg index="0" value="1"/>-->
-    <!--<constructor-arg index="1" value="lei"/>-->
-    <!--<constructor-arg index="2" value="1"/>-->
-    <!--<constructor-arg index="3" value="Hangzhou"/>-->
-    <!--<constructor-arg index="4" ref="car"/>-->
+    <!--<bean.constructor-arg index="0" value="1"/>-->
+    <!--<bean.constructor-arg index="1" value="lei"/>-->
+    <!--<bean.constructor-arg index="2" value="1"/>-->
+    <!--<bean.constructor-arg index="3" value="Hangzhou"/>-->
+    <!--<bean.constructor-arg index="4" ref="car"/>-->
     <!--</bean>-->
     <!-- 有参构造器注入 按顺序填写-->
     <!--<bean id="personWithArgs" class="com.spring.ioc.bean.initBeans.Person">-->
-    <!--<constructor-arg index="0" value="1"/>-->
-    <!--<constructor-arg index="1" value="lei"/>-->
-    <!--<constructor-arg index="2" value="1"/>-->
-    <!--<constructor-arg index="3" value="Hangzhou"/>-->
-    <!--<constructor-arg index="4" ref="car"/>-->
+    <!--<bean.constructor-arg index="0" value="1"/>-->
+    <!--<bean.constructor-arg index="1" value="lei"/>-->
+    <!--<bean.constructor-arg index="2" value="1"/>-->
+    <!--<bean.constructor-arg index="3" value="Hangzhou"/>-->
+    <!--<bean.constructor-arg index="4" ref="car"/>-->
     <!--</bean>-->
     <!-- 按名称注入 -->
     <bean id="personWithArgs" class="com.spring.ioc.initBeans.Person">

@@ -15,7 +15,7 @@ public class CollectionBeansDemo {
     @BeforeClass
     public static void beforeClass()
     {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("collectionBeansTest.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/collection-bean/collectionBeans.xml"));
         complexObject= (ComplexObject)beanFactory.getBean("moreComplexObject");
 
     }

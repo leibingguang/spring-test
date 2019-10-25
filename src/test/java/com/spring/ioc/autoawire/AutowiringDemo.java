@@ -13,7 +13,7 @@ public class AutowiringDemo {
     @BeforeClass
     public static void beforeClass()
     {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("autowiringApplicationContext.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/autowire/autowiringApplicationContext.xml"));
     }
 
     /**

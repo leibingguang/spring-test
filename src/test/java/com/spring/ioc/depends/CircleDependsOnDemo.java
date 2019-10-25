@@ -11,7 +11,7 @@ public class CircleDependsOnDemo {
 
     @BeforeClass
     public static void beforeClass() {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("dependson/dependsOn.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/dependson/dependsOn.xml"));
     }
 
     @Test

@@ -11,7 +11,7 @@ public class BeanPostProcessorTradeDemo {
     @BeforeClass
     public static void init()
     {
-        applicationContext = new ClassPathXmlApplicationContext("beanPostProcessor/beanPostProcessorTrade.xml");
+        applicationContext = new ClassPathXmlApplicationContext("bean/bean-post-processor/beanPostProcessorTrade.xml");
     }
     @Test
     public void test()

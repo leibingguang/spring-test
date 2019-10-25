@@ -11,7 +11,7 @@ public class ClassPathApplicationContextDemo {
     @BeforeClass
     public static void beforeClass()
     {
-        applicationContext = new ClassPathXmlApplicationContext("constructorArgBeansApplicationContext.xml");
+        applicationContext = new ClassPathXmlApplicationContext("bean/constructor-arg/constructorArgBeansApplicationContext.xml");
     }
 
     @Test

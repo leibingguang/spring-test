@@ -12,7 +12,7 @@ public class FactoryBeanDemo {
 
     @BeforeClass
     public static void beforeClass() {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("factoryBean.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/factory-bean/factoryBean.xml"));
     }
 
     /**

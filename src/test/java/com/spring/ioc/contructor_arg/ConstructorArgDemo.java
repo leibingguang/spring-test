@@ -12,7 +12,7 @@ public class ConstructorArgDemo {
     @BeforeClass
     public static void beforeClass()
     {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("constructorArgBeansApplicationContext.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/constructor-arg/constructorArgBeansApplicationContext.xml"));
     }
 
     @Test

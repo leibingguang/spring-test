@@ -12,7 +12,7 @@ public class AutoWireCandidateDemo {
 
     @BeforeClass
     public static void beforeClass() {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("autowire/autowireByTypeWithMap.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/autowire/autowireByTypeWithMap.xml"));
     }
 
     /**

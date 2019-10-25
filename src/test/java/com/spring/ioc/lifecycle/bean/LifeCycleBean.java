@@ -12,7 +12,7 @@ public class LifeCycleBean implements InitializingBean, DisposableBean {
     private String value;
 
     public void init() {
-        System.out.println("init-method execute!");
+        System.out.println("bean.init-method execute!");
     }
 
     @PostConstruct

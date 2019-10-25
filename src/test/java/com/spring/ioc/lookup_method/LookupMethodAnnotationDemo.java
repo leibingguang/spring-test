@@ -12,7 +12,7 @@ public class LookupMethodAnnotationDemo {
     @BeforeClass
     public static void beforeClass()
     {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("lookup-method/lookup-method-annotation.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/lookup-method/lookup-method-annotation.xml"));
     }
 
     @Test

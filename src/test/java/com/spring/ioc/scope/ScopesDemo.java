@@ -13,7 +13,7 @@ public class ScopesDemo {
     @BeforeClass
     public static void beforeClass()
     {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("scopesApplicationContext.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/scope/scopesApplicationContext.xml"));
     }
 
     @Test

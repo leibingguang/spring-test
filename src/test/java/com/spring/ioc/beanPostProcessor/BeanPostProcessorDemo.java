@@ -16,7 +16,7 @@ public class BeanPostProcessorDemo
     @BeforeClass
     public static void beforeClass()
     {
-        beanFactory = new XmlBeanFactory(new ClassPathResource("beanPostProcessor/beanPostProcessor.xml"));
+        beanFactory = new XmlBeanFactory(new ClassPathResource("bean/bean-post-processor/beanPostProcessor.xml"));
         ((ConfigurableBeanFactory)beanFactory).addBeanPostProcessor(new MyBeanPostProcessor());
     }
 
