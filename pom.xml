@@ -59,6 +59,11 @@
             <artifactId>spring-jdbc</artifactId>
             <version>5.0.5.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>5.0.5.RELEASE</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -89,6 +94,13 @@
             <artifactId>ojdbc14</artifactId>
             <version>10.2.0.3.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

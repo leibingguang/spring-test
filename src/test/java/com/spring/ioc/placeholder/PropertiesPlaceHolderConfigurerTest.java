@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class PropertiesReplaceHolderConfigurerTest {
+public class PropertiesPlaceHolderConfigurerTest {
     private ApplicationContext applicationContext = null;
     @Before
     public void before()
