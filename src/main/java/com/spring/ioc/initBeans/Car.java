@@ -1,6 +1,9 @@
 package com.spring.ioc.initBeans;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Car {
+    @Value("${id_placeholder}")
     private String id;
     private String brands;
     private String color;
@@ -20,7 +23,6 @@ public class Car {
     public String getId() {
         return id;
     }
-
     public void setId(String id) {
         this.id = id;
     }

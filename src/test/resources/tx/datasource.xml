@@ -9,9 +9,13 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
         <!--<property name="url" value="jdbc:oracle:thin:@//10.211.95.153:1521/STDB"/>-->
-        <property name="url" value="jdbc:oracle:thin:@//10.211.95.153:1521/STDB"/>
-        <property name="username" value="forum"/>
-        <property name="password" value="forum"/>
+        <!--<property name="url" value="jdbc:oracle:thin:@//10.211.95.153:1521/STDB"/>-->
+        <!--<property name="username" value="forum"/>-->
+        <!--<property name="password" value="forum"/>-->
+
+        <property name="url" value="jdbc:mysql://10.211.55.3:3306/mysql?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;rewriteBatchedStatements=TRUE"/>
+        <property name="username" value="test"/>
+        <property name="password" value="aspire!Q2w"/>
     </bean>
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
@@ -22,6 +26,7 @@
 
     <bean id="userService" class="com.spring.tx.declare.service.impl.UserServiceImpl">
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
+        <property name="userService" ref="userService"/>
     </bean>
 
     <!-- 编程式事务 -->

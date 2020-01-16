@@ -7,10 +7,12 @@
     <bean id="car" class="com.spring.ioc.initBeans.Car">
         <property name="id" value="${id_placeholder}"/>
         <property name="color" value="${color_placeholder}"/>
+        <!--<property name="brands" value="${brands_placeholder}"/>-->
         <property name="brands" value="${brands_placeholder}"/>
     </bean>
 
     <bean id="placeHolder" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:bean/placeholder/metadata.properties"/>
+    <!--<property name="ignoreUnresolvablePlaceholders" value="true"/>--> <!-- 在配置文件中找不到${xxx}的时候，如果不配置该配置项，会报错 -->
     </bean>
 </beans>
