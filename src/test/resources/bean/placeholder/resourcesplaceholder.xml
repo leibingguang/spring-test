@@ -8,14 +8,17 @@
 
     <bean id="car" class="com.spring.ioc.initBeans.Car">
         <!--<property name="id" value="${id_placeholder}"/>-->
-        <property name="color" value="${color_placeholder}"/>
-        <property name="brands" value="${brands_placeholder}"/>
+        <!--<property name="color" value="${color_placeholder}"/>-->
+        <!--<property name="brands" value="${brands_placeholder}"/>-->
     </bean>
 
     <bean id="placeHolder" class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
         <!--<property name="location" value="classpath:bean/placeholder/metadata.properties"/>-->
         <property name="location" value="classpath:bean/placeholder/metadata.properties"/>
+        <property name="fileEncoding" value="utf-8"/>
     </bean>
     <!--<context:property-placeholder location="classpath:bean/placeholder/metadata.properties"/>-->
-    <context:component-scan base-package="com.spring.ioc.initBeans"/>
+    <!--<context:component-scan base-package="com.spring.ioc.initBeans"/>-->
+
+    <context:annotation-config></context:annotation-config>
 </beans>

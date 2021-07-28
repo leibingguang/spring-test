@@ -7,10 +7,10 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Aspect
-@Component
+//@Component
 public class Audience {
 
-    @Pointcut("execution(* com.spring.aop.aspectJ.Performance.perform(..))")
+    @Pointcut("execution(String com.spring.aop.aspectJ.Performance.perform(..))")
     public void performance() {
     }
 

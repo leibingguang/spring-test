@@ -2,10 +2,7 @@ package com.spring.tx.declare.test;
 
 import com.spring.tx.bean.User;
 import com.spring.tx.declare.service.UserService;
-import com.spring.tx.declare.service.impl.UserServiceImpl;
-import org.aspectj.apache.bcel.classfile.annotation.AnnotationElementValue;
 import org.junit.Test;
-import org.springframework.beans.annotation.AnnotationBeanUtils;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.core.annotation.AnnotationAttributes;
@@ -34,8 +31,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void testFindMergedAnnotationAttributes() throws NoSuchMethodException
-    {
+    public void testFindMergedAnnotationAttributes() throws NoSuchMethodException {
         UserService userService = (UserService) context.getBean("userService");
         AnnotatedElement method = userService.getClass().getMethod("save", User.class);
         AnnotationAttributes annotationAttributes = AnnotatedElementUtils.findMergedAnnotationAttributes(method, Transactional.class, false, false);

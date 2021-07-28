@@ -10,10 +10,13 @@ import org.springframework.core.io.ClassPathResource;
 
 public class AutowiringDemo {
     static BeanFactory beanFactory;
+    static BeanFactory childBeanFactory;
     @BeforeClass
     public static void beforeClass()
     {
         beanFactory = new XmlBeanFactory(new ClassPathResource("bean/autowire/autowiringApplicationContext.xml"));
+        childBeanFactory = new XmlBeanFactory(new ClassPathResource("bean/autowire/autowiringApplicationContext.xml"));
+        ((XmlBeanFactory) childBeanFactory).setParentBeanFactory(beanFactory);
     }
 
     /**
@@ -70,5 +73,15 @@ public class AutowiringDemo {
     {
         Person person = (Person)beanFactory.getBean("personAutowiringConstructor");
         Assert.assertNotNull(person.getCarBean());
+    }
+
+    @Test
+    public void testParent()
+    {
+        Person person = (Person)beanFactory.getBean("personAutowiringConstructor");
+        Person childPerson = (Person)childBeanFactory.getBean("personAutowiringConstructor");
+
+        System.out.println(person);
+        System.out.println(childPerson);
     }
 }

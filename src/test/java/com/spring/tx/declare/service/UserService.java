@@ -5,7 +5,7 @@ import org.springframework.transaction.UnexpectedRollbackException;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-@Transactional(rollbackFor = {InterruptedException.class, UnexpectedRollbackException.class})
+//@Transactional(rollbackFor = {InterruptedException.class, UnexpectedRollbackException.class})
 public interface UserService {
 
 //    @Transactional(propagation = Propagation.NEVER)

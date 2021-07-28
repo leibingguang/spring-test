@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/tx
-        http://www.springframework.org/schema/tx/spring-tx.xsd">
+        http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@//10.211.95.153:1521/STDB"/>
         <!--<property name="url" value="jdbc:oracle:thin:@//10.211.95.153:1521/STDB"/>-->
-        <!--<property name="url" value="jdbc:oracle:thin:@//10.211.95.153:1521/STDB"/>-->
-        <!--<property name="username" value="forum"/>-->
-        <!--<property name="password" value="forum"/>-->
+        <property name="username" value="forum"/>
+        <property name="password" value="forum"/>
 
-        <property name="url" value="jdbc:mysql://10.211.55.3:3306/mysql?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;rewriteBatchedStatements=TRUE"/>
-        <property name="username" value="test"/>
-        <property name="password" value="aspire!Q2w"/>
+        <!--<property name="url" value="jdbc:mysql://10.211.55.3:3306/mysql?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;rewriteBatchedStatements=TRUE"/>-->
+        <!--<property name="username" value="test"/>-->
+        <!--<property name="password" value="aspire!Q2w"/>-->
     </bean>
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
@@ -41,17 +41,17 @@
         <property name="transactionTemplate" ref="transactionTemplate"/>
         <property name="userDaoImpl" ref="programingUserDao"/>
     </bean>
-    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
 
-    <!--<tx:advice id="txAdvice" transaction-manager="transactionManager">-->
-    <!--<tx:attributes>-->
-    <!--<tx:method name="*"/>-->
-    <!--</tx:attributes>-->
-    <!--</tx:advice>-->
-
-    <!--<aop:config>-->
-    <!--<aop:pointcut id="interceptorPointCuts" expression="execution(* com.spring..*.*(..))"/>-->
-    <!--<aop:advisor advice-ref="txAdvice" pointcut-ref="interceptorPointCuts"/>-->
-    <!--</aop:config>-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!--<tx:method name="*" isolation="" no-rollback-for="" propagation="" read-only="" rollback-for="" timeout=""/>-->
+            <tx:method name="*"/>
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:pointcut id="interceptorPointCuts" expression="execution(* com.spring..*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="interceptorPointCuts"/>
+    </aop:config>
 
 </beans>

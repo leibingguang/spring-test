@@ -9,7 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = CDPlayConfig.class)
+@ContextConfiguration(classes = {CDPlayConfig.class, JavaConfigTest.class})
 public class JavaConfigTest {
     @Autowired
     private CDPlayer cdPlayer;
@@ -26,12 +26,12 @@ public class JavaConfigTest {
 //        System.out.println(getCdPlayer().getCompactDisc());
     }
 
-    @Bean(name = "compactDisc", autowire = Autowire.BY_NAME)
+    @Bean(name = "compactDisc")
     public CompactDisc getCompactDisc() {
         return new SgtPappers();
     }
 
-    @Bean(name = "cdPlayer", autowire = Autowire.BY_NAME)
+    @Bean(name = "cdPlayer")
     public CDPlayer getCdPlayer() {
         return new CDPlayer(new SgtPappers());
     }

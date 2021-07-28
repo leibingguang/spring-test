@@ -9,8 +9,8 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan(basePackages = "com.spring.aop.aspectJ")
 @Configurable
 public class AspectJConfig {
-//    @Bean
-//    public Audience audience() {
-//        return new Audience();
-//    }
+    @Bean
+    public Audience audience() {
+        return new Audience();
+    }
 }

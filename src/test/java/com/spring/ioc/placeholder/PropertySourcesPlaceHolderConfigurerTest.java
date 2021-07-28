@@ -24,5 +24,7 @@ public class PropertySourcesPlaceHolderConfigurerTest {
         System.out.println(car);
         Environment environment = applicationContext.getEnvironment();
         System.out.println(environment);
+//        System.out.println(System.getProperties());
+        System.out.println(System.getenv());
     }
 }
